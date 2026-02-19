@@ -11,7 +11,7 @@ import YogaStories.Story (story) as S
 
 mkToast :: {} -> JSX
 mkToast = component "ToastStory" \_ -> React.do
-  pure $ div { className: "relative h-64" }
+  pure $ div { className: "relative h-64 w-full [&_.toast]:static" }
     [ T.toast T.toastEnd
         [ A.alert A.info [ span {} "New mail arrived." ]
         , A.alert A.success [ span {} "Message sent successfully." ]

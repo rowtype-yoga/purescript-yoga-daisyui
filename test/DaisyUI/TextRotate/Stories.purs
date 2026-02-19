@@ -10,12 +10,14 @@ import YogaStories.Story (story) as S
 
 mkTextRotate :: {} -> JSX
 mkTextRotate = component "TextRotateStory" \_ -> React.do
-  pure $ div { className: "text-2xl" }
+  pure $ div { className: "text-4xl" }
     [ span {} "I love "
     , TR.textRotate
-        [ TR.textRotateItem "PureScript"
-        , TR.textRotateItem "DaisyUI"
-        , TR.textRotateItem "Tailwind"
+        [ span {}
+            [ TR.textRotateItem "PureScript"
+            , TR.textRotateItem "DaisyUI"
+            , TR.textRotateItem "Tailwind"
+            ]
         ]
     ]
 

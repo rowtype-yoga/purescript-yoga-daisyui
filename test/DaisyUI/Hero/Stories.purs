@@ -11,12 +11,14 @@ import YogaStories.Story (story) as S
 
 mkHero :: {} -> JSX
 mkHero = component "HeroStory" \_ -> React.do
-  pure $ H.hero
-    [ H.heroContent
-        [ div { className: "max-w-md" }
-            [ h1 { className: "text-5xl font-bold" } "Hello there"
-            , p { className: "py-6" } "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi."
-            , Btn.btn Btn.primary "" "Get Started"
+  pure $ div { className: "[&_.hero]:min-h-[24rem]" }
+    [ H.hero
+        [ H.heroContent
+            [ div { className: "max-w-md" }
+                [ h1 { className: "text-5xl font-bold" } "Hello there"
+                , p { className: "py-6" } "Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi."
+                , Btn.btn Btn.primary "" "Get Started"
+                ]
             ]
         ]
     ]
