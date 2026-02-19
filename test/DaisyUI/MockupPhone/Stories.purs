@@ -11,7 +11,7 @@ import YogaStories.Story (story) as S
 mkMockupPhone :: {} -> JSX
 mkMockupPhone = component "MockupPhoneStory" \_ -> React.do
   pure $ MP.mockupPhone
-    [ div { className: "flex items-center justify-center bg-base-200 text-center p-8" }
+    [ div { className: "grid place-content-center bg-neutral-900 text-white h-80" }
         "Hi."
     ]
 
