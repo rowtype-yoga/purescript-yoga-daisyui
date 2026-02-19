@@ -13,24 +13,37 @@ mkTimeline = component "TimelineStory" \_ -> React.do
   pure $ div { className: "flex flex-col gap-4" }
     [ TL.timeline
         [ TL.timelineItem
-            [ TL.timelineLine
-            , TL.timelineStart "1984"
+            [ TL.timelineStart "1984"
             , TL.timelineMiddle ([] :: Array JSX)
-            , TL.timelineEnd "First computer"
+            , TL.timelineEnd "First Macintosh computer"
             , TL.timelineLine
             ]
         , TL.timelineItem
             [ TL.timelineLine
             , TL.timelineStart "1998"
             , TL.timelineMiddle ([] :: Array JSX)
-            , TL.timelineEnd "First website"
+            , TL.timelineEnd "iMac"
             , TL.timelineLine
             ]
         , TL.timelineItem
             [ TL.timelineLine
-            , TL.timelineStart "2024"
+            , TL.timelineStart "2001"
             , TL.timelineMiddle ([] :: Array JSX)
-            , TL.timelineEnd "PureScript + DaisyUI"
+            , TL.timelineEnd "iPod"
+            , TL.timelineLine
+            ]
+        , TL.timelineItem
+            [ TL.timelineLine
+            , TL.timelineStart "2007"
+            , TL.timelineMiddle ([] :: Array JSX)
+            , TL.timelineEnd "iPhone"
+            , TL.timelineLine
+            ]
+        , TL.timelineItem
+            [ TL.timelineLine
+            , TL.timelineStart "2015"
+            , TL.timelineMiddle ([] :: Array JSX)
+            , TL.timelineEnd "Apple Watch"
             ]
         ]
     ]

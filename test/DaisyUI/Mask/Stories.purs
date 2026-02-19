@@ -10,11 +10,18 @@ import YogaStories.Story (story) as S
 
 mkMask :: {} -> JSX
 mkMask = component "MaskStory" \_ -> React.do
-  pure $ div { className: "flex gap-4 items-center" }
-    [ img { className: M.maskCls M.squircle, src: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp", alt: "Squircle", width: "80" }
-    , img { className: M.maskCls M.heart, src: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp", alt: "Heart", width: "80" }
-    , img { className: M.maskCls M.hexagon, src: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp", alt: "Hexagon", width: "80" }
-    , img { className: M.maskCls M.star, src: "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp", alt: "Star", width: "80" }
+  let demoImg = "https://img.daisyui.com/images/stock/photo-1567653418876-5bb0e566e1c2.webp"
+  pure $ div { className: "flex flex-wrap gap-4" }
+    [ img { src: demoImg, className: M.maskCls M.squircle <> " w-20", alt: "Squircle" }
+    , img { src: demoImg, className: M.maskCls M.heart <> " w-20", alt: "Heart" }
+    , img { src: demoImg, className: M.maskCls M.hexagon <> " w-20", alt: "Hexagon" }
+    , img { src: demoImg, className: M.maskCls M.hexagon2 <> " w-20", alt: "Hexagon2" }
+    , img { src: demoImg, className: M.maskCls M.decagon <> " w-20", alt: "Decagon" }
+    , img { src: demoImg, className: M.maskCls M.pentagon <> " w-20", alt: "Pentagon" }
+    , img { src: demoImg, className: M.maskCls M.diamond <> " w-20", alt: "Diamond" }
+    , img { src: demoImg, className: M.maskCls M.circle <> " w-20", alt: "Circle" }
+    , img { src: demoImg, className: M.maskCls M.star <> " w-20", alt: "Star" }
+    , img { src: demoImg, className: M.maskCls M.triangle <> " w-20", alt: "Triangle" }
     ]
 
 default :: JSX

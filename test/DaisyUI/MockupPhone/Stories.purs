@@ -10,9 +10,9 @@ import YogaStories.Story (story) as S
 
 mkMockupPhone :: {} -> JSX
 mkMockupPhone = component "MockupPhoneStory" \_ -> React.do
-  pure $ div { className: "flex flex-col gap-4" }
-    [ MP.mockupPhone
-        [ div { className: "flex items-center justify-center h-full bg-base-200" } "Phone content" ]
+  pure $ MP.mockupPhone
+    [ div { className: "flex items-center justify-center bg-base-200 text-center p-8" }
+        "Hi."
     ]
 
 default :: JSX

@@ -14,10 +14,10 @@ mkDrawer = component "DrawerStory" \_ -> React.do
     [ D.drawer
         [ input { type: "checkbox", id: "my-drawer", className: D.drawerToggle }
         , D.drawerContent
-            [ label { htmlFor: "my-drawer", className: "btn btn-primary" } "Open drawer" ]
+            [ label { htmlFor: "my-drawer", className: "btn btn-primary drawer-button" } "Open drawer" ]
         , D.drawerSide
-            [ label { htmlFor: "my-drawer", className: D.drawerOverlay, "aria-label": "close sidebar" } ([] :: Array JSX)
-            , ul { className: "menu bg-base-200 text-base-content min-h-full w-60 p-4" }
+            [ label { htmlFor: "my-drawer", "aria-label": "close sidebar", className: D.drawerOverlay } ([] :: Array JSX)
+            , ul { className: "menu bg-base-200 text-base-content min-h-full w-80 p-4" }
                 [ li {} [ a {} "Sidebar Item 1" ]
                 , li {} [ a {} "Sidebar Item 2" ]
                 ]

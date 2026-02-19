@@ -2,37 +2,39 @@ module DaisyUI.Input.Stories (default) where
 
 import Prelude hiding (div)
 
-import Data.Generic.Rep (class Generic)
 import React.Basic (JSX)
 import DaisyUI.Input as I
+import DaisyUI.Label as L
+import DaisyUI.FormControl as FC
 import Yoga.React (component)
-import Yoga.React.DOM.HTML (div, input)
-import YogaStories.Controls (enum)
+import Yoga.React.DOM.HTML (div, input, label)
 import YogaStories.Story (story) as S
 
-data Color = None | Primary | Secondary | Accent | Info | Success | Warning | Error
-
-derive instance Generic Color _
-
-colorClass :: Color -> String
-colorClass = case _ of
-  None -> ""
-  Primary -> I.primary
-  Secondary -> I.secondary
-  Accent -> I.accent
-  Info -> I.info
-  Success -> I.success
-  Warning -> I.warning
-  Error -> I.error
-
-mkInput :: { color :: Color } -> JSX
-mkInput = component "InputStory" \props -> React.do
+mkInput :: {} -> JSX
+mkInput = component "InputStory" \_ -> React.do
   pure $ div { className: "flex flex-col gap-4 w-full max-w-xs" }
-    [ input { type: "text", className: I.inputCls (colorClass props.color) "", placeholder: "Type here..." }
-    , input { type: "text", className: I.inputCls (colorClass props.color) I.sm, placeholder: "Small" }
-    , input { type: "text", className: I.inputCls (colorClass props.color) I.lg, placeholder: "Large" }
+    [ FC.fieldset
+        [ FC.fieldsetLegend "What is your name?"
+        , input { type: "text", className: I.inputCls "" "", placeholder: "Type here" }
+        , label { className: "label" } "Optional"
+        ]
+    , L.floatingLabel
+        [ input { type: "email", className: I.inputCls I.bordered "", placeholder: "alex@example.com" }
+        , L.labelSpan "Email"
+        ]
+    , div { className: "flex flex-wrap gap-2" }
+        [ input { type: "text", className: I.inputCls I.primary "", placeholder: "Primary" }
+        , input { type: "text", className: I.inputCls I.secondary "", placeholder: "Secondary" }
+        , input { type: "text", className: I.inputCls I.accent "", placeholder: "Accent" }
+        ]
+    , div { className: "flex flex-wrap gap-2 items-center" }
+        [ input { type: "text", className: I.inputCls "" I.lg, placeholder: "Large" }
+        , input { type: "text", className: I.inputCls "" "", placeholder: "Normal" }
+        , input { type: "text", className: I.inputCls "" I.sm, placeholder: "Small" }
+        , input { type: "text", className: I.inputCls "" I.xs, placeholder: "Tiny" }
+        ]
+    , input { type: "text", className: I.inputCls "" "" <> " w-full", disabled: true, placeholder: "Disabled" }
     ]
 
 default :: JSX
-default = S.story "default" mkInput
-  { color: enum None }
+default = S.story "default" mkInput {}

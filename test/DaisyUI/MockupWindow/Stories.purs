@@ -10,11 +10,9 @@ import YogaStories.Story (story) as S
 
 mkMockupWindow :: {} -> JSX
 mkMockupWindow = component "MockupWindowStory" \_ -> React.do
-  pure $ div { className: "flex flex-col gap-4" }
-    [ MW.mockupWindow
-        [ div { className: "bg-base-200 flex justify-center px-4 py-16" }
-            "Window content"
-        ]
+  pure $ MW.mockupWindow
+    [ div { className: "bg-base-200 flex justify-center px-4 py-16" }
+        "Hello!"
     ]
 
 default :: JSX

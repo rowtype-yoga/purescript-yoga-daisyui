@@ -11,10 +11,10 @@ import YogaStories.Story (story) as S
 
 mkToast :: {} -> JSX
 mkToast = component "ToastStory" \_ -> React.do
-  pure $ div { className: "relative h-48" }
+  pure $ div { className: "relative h-64" }
     [ T.toast T.toastEnd
-        [ A.alert A.info [ span {} "New message arrived." ]
-        , A.alert A.success [ span {} "Message sent." ]
+        [ A.alert A.info [ span {} "New mail arrived." ]
+        , A.alert A.success [ span {} "Message sent successfully." ]
         ]
     ]
 

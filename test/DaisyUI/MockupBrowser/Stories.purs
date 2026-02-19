@@ -10,13 +10,11 @@ import YogaStories.Story (story) as S
 
 mkMockupBrowser :: {} -> JSX
 mkMockupBrowser = component "MockupBrowserStory" \_ -> React.do
-  pure $ div { className: "flex flex-col gap-4" }
-    [ MB.mockupBrowser
-        [ MB.mockupBrowserToolbar
-            [ input { type: "text", className: "input", value: "https://daisyui.com", readonly: true } ]
-        , div { className: "bg-base-200 flex justify-center px-4 py-16" }
-            "Hello!"
-        ]
+  pure $ MB.mockupBrowser
+    [ MB.mockupBrowserToolbar
+        [ input { type: "text", className: "input", value: "https://daisyui.com", readonly: true } ]
+    , div { className: "bg-base-200 flex justify-center px-4 py-16" }
+        "Hello!"
     ]
 
 default :: JSX

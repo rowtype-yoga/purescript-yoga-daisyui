@@ -14,26 +14,60 @@ mkTable = component "TableStory" \_ -> React.do
     [ T.daisyTable ""
         [ T.tableHeader
             [ T.tableRow
-                [ T.tableHead "#"
+                [ T.tableHead ""
                 , T.tableHead "Name"
                 , T.tableHead "Job"
+                , T.tableHead "Favorite Color"
                 ]
             ]
         , T.tableBody
-            [ T.tableRowHover
-                [ T.tableCell "1"
-                , T.tableCell "Alice"
-                , T.tableCell "Engineer"
+            [ T.tableRow
+                [ T.tableHead "1"
+                , T.tableCell "Cy Ganderton"
+                , T.tableCell "Quality Control Specialist"
+                , T.tableCell "Blue"
                 ]
             , T.tableRowHover
-                [ T.tableCell "2"
-                , T.tableCell "Bob"
-                , T.tableCell "Designer"
+                [ T.tableHead "2"
+                , T.tableCell "Hart Hagerty"
+                , T.tableCell "Desktop Support Technician"
+                , T.tableCell "Purple"
                 ]
-            , T.tableRowHover
-                [ T.tableCell "3"
-                , T.tableCell "Charlie"
-                , T.tableCell "Manager"
+            , T.tableRow
+                [ T.tableHead "3"
+                , T.tableCell "Brice Swyre"
+                , T.tableCell "Tax Accountant"
+                , T.tableCell "Red"
+                ]
+            ]
+        ]
+    , T.daisyTable T.zebra
+        [ T.tableHeader
+            [ T.tableRow
+                [ T.tableHead ""
+                , T.tableHead "Name"
+                , T.tableHead "Job"
+                , T.tableHead "Favorite Color"
+                ]
+            ]
+        , T.tableBody
+            [ T.tableRow
+                [ T.tableHead "1"
+                , T.tableCell "Cy Ganderton"
+                , T.tableCell "Quality Control Specialist"
+                , T.tableCell "Blue"
+                ]
+            , T.tableRow
+                [ T.tableHead "2"
+                , T.tableCell "Hart Hagerty"
+                , T.tableCell "Desktop Support Technician"
+                , T.tableCell "Purple"
+                ]
+            , T.tableRow
+                [ T.tableHead "3"
+                , T.tableCell "Brice Swyre"
+                , T.tableCell "Tax Accountant"
+                , T.tableCell "Red"
                 ]
             ]
         ]

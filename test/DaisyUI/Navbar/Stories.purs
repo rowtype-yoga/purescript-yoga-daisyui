@@ -6,7 +6,7 @@ import React.Basic (JSX)
 import DaisyUI.Navbar as Nav
 import DaisyUI.Button as Btn
 import Yoga.React (component)
-import Yoga.React.DOM.HTML (div, a)
+import Yoga.React.DOM.HTML (a, div)
 import YogaStories.Story (story) as S
 
 mkNavbar :: {} -> JSX
@@ -15,10 +15,20 @@ mkNavbar = component "NavbarStory" \_ -> React.do
     [ Nav.navbar
         [ Nav.navbarStart
             [ a { className: "btn btn-ghost text-xl" } "daisyUI" ]
+        , Nav.navbarCenter ([] :: Array JSX)
         , Nav.navbarEnd
-            [ Btn.btn Btn.ghost Btn.md "About"
-            , Btn.btn Btn.primary Btn.md "Get Started"
+            [ Btn.btn Btn.ghost "" "Button" ]
+        ]
+    , Nav.navbar
+        [ Nav.navbarStart
+            [ a { className: "btn btn-ghost text-xl" } "daisyUI" ]
+        , Nav.navbarCenter
+            [ a { className: "btn btn-ghost" } "Home"
+            , a { className: "btn btn-ghost" } "About"
+            , a { className: "btn btn-ghost" } "Contact"
             ]
+        , Nav.navbarEnd
+            [ Btn.btn Btn.primary "" "Get Started" ]
         ]
     ]
 

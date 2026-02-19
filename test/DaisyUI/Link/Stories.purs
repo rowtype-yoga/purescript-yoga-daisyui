@@ -11,10 +11,16 @@ import YogaStories.Story (story) as S
 mkLink :: {} -> JSX
 mkLink = component "LinkStory" \_ -> React.do
   pure $ div { className: "flex flex-col gap-2" }
-    [ a { className: L.linkCls L.primary } "Primary link"
-    , a { className: L.linkCls L.secondary } "Secondary link"
-    , a { className: L.linkCls L.accent } "Accent link"
-    , a { className: L.linkCls L.hover } "Hover link"
+    [ a { className: L.linkCls "" } "I'm a simple link"
+    , a { className: L.linkCls L.primary } "I'm a simple link"
+    , a { className: L.linkCls L.secondary } "I'm a simple link"
+    , a { className: L.linkCls L.accent } "I'm a simple link"
+    , a { className: L.linkCls L.neutral } "I'm a simple link"
+    , a { className: L.linkCls L.success } "I'm a simple link"
+    , a { className: L.linkCls L.info } "I'm a simple link"
+    , a { className: L.linkCls L.warning } "I'm a simple link"
+    , a { className: L.linkCls L.error } "I'm a simple link"
+    , a { className: L.linkCls L.hover } "I'm a simple link"
     ]
 
 default :: JSX

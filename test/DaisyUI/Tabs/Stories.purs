@@ -2,34 +2,43 @@ module DaisyUI.Tabs.Stories (default) where
 
 import Prelude hiding (div)
 
-import Data.Generic.Rep (class Generic)
 import React.Basic (JSX)
 import DaisyUI.Tabs as Tabs
 import Yoga.React (component)
 import Yoga.React.DOM.HTML (div)
-import YogaStories.Controls (enum)
 import YogaStories.Story (story) as S
 
-data Variant = Boxed | Bordered | Lifted
-
-derive instance Generic Variant _
-
-variantClass :: Variant -> String
-variantClass = case _ of
-  Boxed -> Tabs.boxed
-  Bordered -> Tabs.bordered
-  Lifted -> Tabs.lifted
-
-mkTabs :: { variant :: Variant } -> JSX
-mkTabs = component "TabsStory" \props -> React.do
-  pure $ div { className: "flex flex-col gap-4" }
-    [ Tabs.tabs (variantClass props.variant)
+mkTabs :: {} -> JSX
+mkTabs = component "TabsStory" \_ -> React.do
+  pure $ div { className: "flex flex-col gap-6" }
+    [ Tabs.tabs Tabs.bordered
         [ Tabs.tab "Tab 1"
         , Tabs.tabActive "Tab 2"
         , Tabs.tab "Tab 3"
         ]
+    , Tabs.tabs Tabs.lifted
+        [ Tabs.tab "Tab 1"
+        , Tabs.tabActive "Tab 2"
+        , Tabs.tab "Tab 3"
+        ]
+    , Tabs.tabs Tabs.boxed
+        [ Tabs.tab "Tab 1"
+        , Tabs.tabActive "Tab 2"
+        , Tabs.tab "Tab 3"
+        ]
+    , div { className: "flex gap-2 items-center" }
+        [ Tabs.tabs (Tabs.bordered <> " " <> Tabs.xs)
+            [ Tabs.tab "Tiny"
+            , Tabs.tabActive "Tiny"
+            , Tabs.tab "Tiny"
+            ]
+        , Tabs.tabs (Tabs.bordered <> " " <> Tabs.lg)
+            [ Tabs.tab "Large"
+            , Tabs.tabActive "Large"
+            , Tabs.tab "Large"
+            ]
+        ]
     ]
 
 default :: JSX
-default = S.story "default" mkTabs
-  { variant: enum Bordered }
+default = S.story "default" mkTabs {}

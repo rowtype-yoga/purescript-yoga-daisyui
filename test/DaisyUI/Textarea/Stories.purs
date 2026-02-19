@@ -4,6 +4,7 @@ import Prelude hiding (div)
 
 import React.Basic (JSX)
 import DaisyUI.Textarea as TA
+import DaisyUI.FormControl as FC
 import Yoga.React (component)
 import Yoga.React.DOM.HTML (div, textarea)
 import YogaStories.Story (story) as S
@@ -11,8 +12,18 @@ import YogaStories.Story (story) as S
 mkTextarea :: {} -> JSX
 mkTextarea = component "TextareaStory" \_ -> React.do
   pure $ div { className: "flex flex-col gap-4 w-full max-w-xs" }
-    [ textarea { className: TA.textareaCls TA.bordered "", placeholder: "Type here...", rows: 4 }
-    , textarea { className: TA.textareaCls TA.primary "", placeholder: "Primary textarea", rows: 3 }
+    [ FC.fieldset
+        [ FC.fieldsetLegend "Your bio"
+        , textarea { className: TA.textareaCls "" "", placeholder: "Bio" }
+        , div { className: "label" } "Optional"
+        ]
+    , textarea { className: TA.textareaCls TA.bordered "", placeholder: "Bordered textarea" }
+    , textarea { className: TA.textareaCls TA.ghost "", placeholder: "Ghost textarea" }
+    , div { className: "flex flex-wrap gap-2" }
+        [ textarea { className: TA.textareaCls TA.primary "", placeholder: "Primary" }
+        , textarea { className: TA.textareaCls TA.secondary "", placeholder: "Secondary" }
+        , textarea { className: TA.textareaCls TA.accent "", placeholder: "Accent" }
+        ]
     ]
 
 default :: JSX

@@ -12,10 +12,10 @@ mkFab :: {} -> JSX
 mkFab = component "FabStory" \_ -> React.do
   pure $ div { className: "relative h-64" }
     [ F.fab
-        [ F.fabMainAction "+"
-        , button { className: "btn btn-circle btn-sm btn-primary" } "A"
-        , button { className: "btn btn-circle btn-sm btn-secondary" } "B"
-        , button { className: "btn btn-circle btn-sm btn-accent" } "C"
+        [ div { tabIndex: 0, role: "button", className: "btn btn-lg btn-circle btn-primary" } "F"
+        , button { className: "btn btn-lg btn-circle" } "A"
+        , button { className: "btn btn-lg btn-circle" } "B"
+        , button { className: "btn btn-lg btn-circle" } "C"
         ]
     ]
 

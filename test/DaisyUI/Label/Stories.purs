@@ -6,19 +6,19 @@ import React.Basic (JSX)
 import DaisyUI.Label as L
 import DaisyUI.Input as I
 import Yoga.React (component)
-import Yoga.React.DOM.HTML (div, input, label)
+import Yoga.React.DOM.HTML (div, input)
 import YogaStories.Story (story) as S
 
 mkLabel :: {} -> JSX
 mkLabel = component "LabelStory" \_ -> React.do
   pure $ div { className: "flex flex-col gap-4 w-full max-w-xs" }
-    [ label { className: I.inputCls "" "" }
-        [ L.labelSpan "Name"
-        , input { type: "text", placeholder: "Type here" }
+    [ L.floatingLabel
+        [ input { type: "text", className: I.inputCls "" "", placeholder: " " }
+        , L.labelSpan "Name"
         ]
     , L.floatingLabel
-        [ input { type: "text", className: I.inputCls "" "", placeholder: " " }
-        , L.labelSpan "Floating label"
+        [ input { type: "email", className: I.inputCls I.bordered "", placeholder: " " }
+        , L.labelSpan "Email"
         ]
     ]
 

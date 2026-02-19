@@ -10,12 +10,14 @@ import YogaStories.Story (story) as S
 
 mkDivider :: {} -> JSX
 mkDivider = component "DividerStory" \_ -> React.do
-  pure $ div { className: "flex flex-col w-full gap-2" }
-    [ div {} "Content above"
+  pure $ div { className: "flex flex-col w-full" }
+    [ div { className: "card bg-base-300 rounded-box grid h-20 place-items-center" } "Content"
     , D.divider "OR"
-    , div {} "Content below"
+    , div { className: "card bg-base-300 rounded-box grid h-20 place-items-center" } "Content"
     , D.dividerPrimary "Primary"
-    , div {} "More content"
+    , D.dividerSecondary "Secondary"
+    , D.dividerAccent "Accent"
+    , D.dividerNeutral "Neutral"
     ]
 
 default :: JSX

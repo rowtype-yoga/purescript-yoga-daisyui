@@ -14,7 +14,7 @@ mkBreadcrumbs = component "BreadcrumbsStory" \_ -> React.do
     [ BC.breadcrumbs
         [ BC.breadcrumbItem [ a {} "Home" ]
         , BC.breadcrumbItem [ a {} "Documents" ]
-        , BC.breadcrumbItem "Current Page"
+        , BC.breadcrumbItem "Add Document"
         ]
     ]
 

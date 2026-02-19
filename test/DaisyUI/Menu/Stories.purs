@@ -10,15 +10,30 @@ import YogaStories.Story (story) as S
 
 mkMenu :: {} -> JSX
 mkMenu = component "MenuStory" \_ -> React.do
-  pure $ div { className: "flex flex-col gap-4" }
+  pure $ div { className: "flex flex-wrap gap-4" }
     [ div { className: "w-56" }
-        [ Menu.menu ""
-            [ Menu.menuTitle "Menu Title"
-            , Menu.menuItem [ a {} "Item 1" ]
-            , Menu.menuActive [ a { className: "active" } "Item 2 (active)" ]
+        [ Menu.menu "bg-base-200 rounded-box"
+            [ Menu.menuItem [ a {} "Item 1" ]
+            , Menu.menuItem [ a {} "Item 2" ]
+            , Menu.menuSub "Parent"
+                [ Menu.menuItem [ a {} "Submenu 1" ]
+                , Menu.menuItem [ a {} "Submenu 2" ]
+                ]
             , Menu.menuItem [ a {} "Item 3" ]
-            , Menu.menuDisabled [ a {} "Disabled" ]
             ]
+        ]
+    , div { className: "w-56" }
+        [ Menu.menu "bg-base-200 rounded-box"
+            [ Menu.menuTitle "Title"
+            , Menu.menuItem [ a {} "Item 1" ]
+            , Menu.menuItem [ a { className: "active" } "Item 2" ]
+            , Menu.menuItem [ a {} "Item 3" ]
+            ]
+        ]
+    , Menu.menuHorizontal "bg-base-200 rounded-box"
+        [ Menu.menuItem [ a {} "Item 1" ]
+        , Menu.menuItem [ a {} "Item 2" ]
+        , Menu.menuItem [ a {} "Item 3" ]
         ]
     ]
 

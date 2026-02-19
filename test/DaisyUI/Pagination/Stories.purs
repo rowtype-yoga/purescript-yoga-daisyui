@@ -17,6 +17,11 @@ mkPagination = component "PaginationStory" \_ -> React.do
         , button { className: "btn " <> P.joinItem } "3"
         , button { className: "btn " <> P.joinItem } "4"
         ]
+    , P.join
+        [ button { className: "btn " <> P.joinItem } "«"
+        , button { className: "btn " <> P.joinItem } "Page 22"
+        , button { className: "btn " <> P.joinItem } "»"
+        ]
     ]
 
 default :: JSX

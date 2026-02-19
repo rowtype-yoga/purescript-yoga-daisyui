@@ -17,6 +17,18 @@ mkSteps = component "StepsStory" \_ -> React.do
         , Steps.step "" "Purchase"
         , Steps.step "" "Receive product"
         ]
+    , Steps.steps ""
+        [ Steps.step Steps.info "Register"
+        , Steps.step Steps.info "Choose plan"
+        , Steps.step Steps.info "Purchase"
+        , Steps.step "" "Receive product"
+        ]
+    , Steps.steps Steps.vertical
+        [ Steps.step Steps.primary "Register"
+        , Steps.step Steps.primary "Choose plan"
+        , Steps.step "" "Purchase"
+        , Steps.step "" "Receive product"
+        ]
     ]
 
 default :: JSX

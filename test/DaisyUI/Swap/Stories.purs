@@ -10,16 +10,21 @@ import YogaStories.Story (story) as S
 
 mkSwap :: {} -> JSX
 mkSwap = component "SwapStory" \_ -> React.do
-  pure $ div { className: "flex flex-col gap-4 text-4xl" }
-    [ Sw.swapRotate
+  pure $ div { className: "flex flex-col gap-6 items-center text-6xl" }
+    [ Sw.swap
         [ input { type: "checkbox" }
         , Sw.swapOn "ON"
         , Sw.swapOff "OFF"
         ]
+    , Sw.swapRotate
+        [ input { type: "checkbox" }
+        , Sw.swapOn "🌛"
+        , Sw.swapOff "🌞"
+        ]
     , Sw.swapFlip
         [ input { type: "checkbox" }
-        , Sw.swapOn "YES"
-        , Sw.swapOff "NO"
+        , Sw.swapOn "😈"
+        , Sw.swapOff "😇"
         ]
     ]
 

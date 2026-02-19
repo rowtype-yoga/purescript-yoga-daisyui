@@ -5,15 +5,17 @@ import Prelude hiding (div)
 import React.Basic (JSX)
 import DaisyUI.Diff as D
 import Yoga.React (component)
-import Yoga.React.DOM.HTML (div)
+import Yoga.React.DOM.HTML (div, img)
 import YogaStories.Story (story) as S
 
 mkDiff :: {} -> JSX
 mkDiff = component "DiffStory" \_ -> React.do
   pure $ div { className: "flex flex-col gap-4" }
     [ D.diff
-        [ D.diffItem1 [ div { className: "bg-primary text-primary-content grid place-content-center text-6xl font-black rounded-box h-48 w-96" } "DAISY" ]
-        , D.diffItem2 [ div { className: "bg-base-200 grid place-content-center text-6xl font-black rounded-box h-48 w-96" } "DAISY" ]
+        [ D.diffItem1
+            [ img { src: "https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp", alt: "Daisy" } ]
+        , D.diffItem2
+            [ img { src: "https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp", alt: "Daisy" } ]
         , D.diffResizer
         ]
     ]

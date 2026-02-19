@@ -16,16 +16,21 @@ mkFooter = component "FooterStory" \_ -> React.do
             [ F.footerTitle "Services"
             , a { className: "link link-hover" } "Branding"
             , a { className: "link link-hover" } "Design"
+            , a { className: "link link-hover" } "Marketing"
+            , a { className: "link link-hover" } "Advertisement"
             ]
         , F.footerNav
             [ F.footerTitle "Company"
             , a { className: "link link-hover" } "About us"
             , a { className: "link link-hover" } "Contact"
+            , a { className: "link link-hover" } "Jobs"
+            , a { className: "link link-hover" } "Press kit"
             ]
         , F.footerNav
             [ F.footerTitle "Legal"
-            , a { className: "link link-hover" } "Terms"
-            , a { className: "link link-hover" } "Privacy"
+            , a { className: "link link-hover" } "Terms of use"
+            , a { className: "link link-hover" } "Privacy policy"
+            , a { className: "link link-hover" } "Cookie policy"
             ]
         ]
     ]
