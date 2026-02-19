@@ -5,12 +5,12 @@ import Prelude hiding (div)
 import React.Basic (JSX)
 import DaisyUI.Steps as Steps
 import Yoga.React (component)
-import Yoga.React.DOM.HTML (div)
+import Yoga.React.DOM.HTML (div, li)
 import YogaStories.Story (story) as S
 
 mkSteps :: {} -> JSX
 mkSteps = component "StepsStory" \_ -> React.do
-  pure $ div { className: "flex flex-col gap-4" }
+  pure $ div { className: "flex flex-col gap-8" }
     [ Steps.steps ""
         [ Steps.step Steps.primary "Register"
         , Steps.step Steps.primary "Choose plan"
@@ -18,10 +18,10 @@ mkSteps = component "StepsStory" \_ -> React.do
         , Steps.step "" "Receive product"
         ]
     , Steps.steps ""
-        [ Steps.step Steps.info "Register"
-        , Steps.step Steps.info "Choose plan"
-        , Steps.step Steps.info "Purchase"
-        , Steps.step "" "Receive product"
+        [ li { className: "step step-info", "data-content": "✓" } "Register"
+        , li { className: "step step-info", "data-content": "✓" } "Choose plan"
+        , li { className: "step step-info", "data-content": "✓" } "Purchase"
+        , li { className: "step", "data-content": "?" } "Receive product"
         ]
     , Steps.steps Steps.vertical
         [ Steps.step Steps.primary "Register"
