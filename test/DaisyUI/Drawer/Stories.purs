@@ -10,7 +10,7 @@ import YogaStories.Story (story) as S
 
 mkDrawer :: {} -> JSX
 mkDrawer = component "DrawerStory" \_ -> React.do
-  pure $ div { className: "h-64" }
+  pure $ div { className: "relative h-64 overflow-hidden [&_.drawer-side]:absolute [&_.drawer-side]:h-full" }
     [ D.drawer
         [ input { type: "checkbox", id: "my-drawer", className: D.drawerToggle }
         , D.drawerContent
