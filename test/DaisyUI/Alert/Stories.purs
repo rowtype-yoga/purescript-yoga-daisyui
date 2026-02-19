@@ -7,7 +7,6 @@ import React.Basic (JSX)
 import DaisyUI.Alert as Alert
 import Yoga.React (component)
 import Yoga.React.DOM.HTML (div, span)
-import Yoga.React.DOM.Internal (text)
 import YogaStories.Controls (enum)
 import YogaStories.Story (story) as S
 
@@ -26,7 +25,7 @@ mkAlert :: { color :: Color } -> JSX
 mkAlert = component "AlertStory" \props -> React.do
   pure $ div { className: "flex flex-col gap-4" }
     [ Alert.alert (colorClass props.color)
-        [ span {} (text "This is an alert message.") ]
+        [ span {} "This is an alert message." ]
     ]
 
 default :: JSX

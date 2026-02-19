@@ -19,6 +19,8 @@ package:
     dependencies:
       - yoga-stories
       - console
+      - integers
+      - nullable
   publish:
     version: 1.0.0
     license: WTFPL

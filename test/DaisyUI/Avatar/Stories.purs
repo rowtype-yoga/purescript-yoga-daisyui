@@ -6,7 +6,6 @@ import React.Basic (JSX)
 import DaisyUI.Avatar as Av
 import Yoga.React (component)
 import Yoga.React.DOM.HTML (div, img)
-import Yoga.React.DOM.Internal (text)
 import YogaStories.Story (story) as S
 
 mkAvatar :: {} -> JSX
@@ -22,7 +21,7 @@ mkAvatar = component "AvatarStory" \_ -> React.do
         ]
     , Av.avatarPlaceholder
         [ div { className: "bg-neutral text-neutral-content w-12 rounded-full" }
-            [ div {} (text "AB") ]
+            [ div {} "AB" ]
         ]
     ]
 

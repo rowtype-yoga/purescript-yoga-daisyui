@@ -8,7 +8,6 @@ import DaisyUI.Dropdown as DD
 import DaisyUI.Button as Btn
 import Yoga.React (component)
 import Yoga.React.DOM.HTML (div, li, a)
-import Yoga.React.DOM.Internal (text)
 import YogaStories.Controls (enum)
 import YogaStories.Story (story) as S
 
@@ -28,11 +27,11 @@ mkDropdown :: { position :: Position } -> JSX
 mkDropdown = component "DropdownStory" \props -> React.do
   pure $ div { className: "flex items-center justify-center p-32" }
     [ DD.dropdown (positionClass props.position)
-        [ Btn.btn Btn.primary Btn.md (text "Click me")
+        [ Btn.btn Btn.primary Btn.md "Click me"
         , DD.dropdownContent
-            [ li {} [ a {} (text "Item 1") ]
-            , li {} [ a {} (text "Item 2") ]
-            , li {} [ a {} (text "Item 3") ]
+            [ li {} [ a {} "Item 1" ]
+            , li {} [ a {} "Item 2" ]
+            , li {} [ a {} "Item 3" ]
             ]
         ]
     ]

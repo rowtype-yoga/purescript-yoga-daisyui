@@ -6,7 +6,6 @@ import React.Basic (JSX)
 import DaisyUI.Table as T
 import Yoga.React (component)
 import Yoga.React.DOM.HTML (div)
-import Yoga.React.DOM.Internal (text)
 import YogaStories.Story (story) as S
 
 mkTable :: {} -> JSX
@@ -15,26 +14,26 @@ mkTable = component "TableStory" \_ -> React.do
     [ T.daisyTable ""
         [ T.tableHeader
             [ T.tableRow
-                [ T.tableHead (text "#")
-                , T.tableHead (text "Name")
-                , T.tableHead (text "Job")
+                [ T.tableHead "#"
+                , T.tableHead "Name"
+                , T.tableHead "Job"
                 ]
             ]
         , T.tableBody
             [ T.tableRowHover
-                [ T.tableCell (text "1")
-                , T.tableCell (text "Alice")
-                , T.tableCell (text "Engineer")
+                [ T.tableCell "1"
+                , T.tableCell "Alice"
+                , T.tableCell "Engineer"
                 ]
             , T.tableRowHover
-                [ T.tableCell (text "2")
-                , T.tableCell (text "Bob")
-                , T.tableCell (text "Designer")
+                [ T.tableCell "2"
+                , T.tableCell "Bob"
+                , T.tableCell "Designer"
                 ]
             , T.tableRowHover
-                [ T.tableCell (text "3")
-                , T.tableCell (text "Charlie")
-                , T.tableCell (text "Manager")
+                [ T.tableCell "3"
+                , T.tableCell "Charlie"
+                , T.tableCell "Manager"
                 ]
             ]
         ]

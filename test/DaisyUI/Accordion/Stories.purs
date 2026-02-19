@@ -7,7 +7,6 @@ import React.Basic (JSX)
 import DaisyUI.Accordion as Acc
 import Yoga.React (component)
 import Yoga.React.DOM.HTML (div, p)
-import Yoga.React.DOM.Internal (text)
 import YogaStories.Controls (enum)
 import YogaStories.Story (story) as S
 
@@ -24,14 +23,14 @@ mkAccordion :: { variant :: Variant } -> JSX
 mkAccordion = component "AccordionStory" \props -> React.do
   pure $ div { className: "flex flex-col gap-2 w-96" }
     [ Acc.collapse (variantClass props.variant)
-        [ Acc.collapseTitle (text "Click to open")
+        [ Acc.collapseTitle "Click to open"
         , Acc.collapseContent
-            [ p {} (text "This is the content of the accordion.") ]
+            [ p {} "This is the content of the accordion." ]
         ]
     , Acc.collapse (variantClass props.variant)
-        [ Acc.collapseTitle (text "Another item")
+        [ Acc.collapseTitle "Another item"
         , Acc.collapseContent
-            [ p {} (text "More hidden content here.") ]
+            [ p {} "More hidden content here." ]
         ]
     ]
 

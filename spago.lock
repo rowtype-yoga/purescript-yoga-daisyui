@@ -49,6 +49,8 @@
         "test": {
           "dependencies": [
             "console",
+            "integers",
+            "nullable",
             "yoga-stories"
           ]
         }

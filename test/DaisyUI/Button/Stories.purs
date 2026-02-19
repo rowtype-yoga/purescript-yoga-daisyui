@@ -7,7 +7,6 @@ import React.Basic (JSX)
 import DaisyUI.Button as Btn
 import Yoga.React (component)
 import Yoga.React.DOM.HTML (div)
-import Yoga.React.DOM.Internal (text)
 import YogaStories.Controls (enum)
 import YogaStories.Story (story) as S
 
@@ -53,7 +52,7 @@ modifierClass = case _ of
 mkButton :: { label :: String, color :: Color, size :: Size, modifier :: Modifier } -> JSX
 mkButton = component "ButtonStory" \props -> React.do
   pure $ div { className: "flex flex-col gap-4" }
-    [ Btn.btn (colorClass props.color <> " " <> modifierClass props.modifier) (sizeClass props.size) (text props.label)
+    [ Btn.btn (colorClass props.color <> " " <> modifierClass props.modifier) (sizeClass props.size) props.label
     ]
 
 default :: JSX

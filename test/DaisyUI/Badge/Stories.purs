@@ -7,7 +7,6 @@ import React.Basic (JSX)
 import DaisyUI.Badge as Badge
 import Yoga.React (component)
 import Yoga.React.DOM.HTML (div)
-import Yoga.React.DOM.Internal (text)
 import YogaStories.Controls (enum)
 import YogaStories.Story (story) as S
 
@@ -52,7 +51,7 @@ modifierClass = case _ of
 mkBadge :: { label :: String, color :: Color, size :: Size, modifier :: Modifier } -> JSX
 mkBadge = component "BadgeStory" \props -> React.do
   pure $ div { className: "flex flex-col gap-4" }
-    [ Badge.badge (colorClass props.color <> " " <> modifierClass props.modifier) (sizeClass props.size) (text props.label)
+    [ Badge.badge (colorClass props.color <> " " <> modifierClass props.modifier) (sizeClass props.size) props.label
     ]
 
 default :: JSX

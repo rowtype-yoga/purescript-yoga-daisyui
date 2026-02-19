@@ -7,7 +7,6 @@ import React.Basic (JSX)
 import DaisyUI.Chat as Chat
 import Yoga.React (component)
 import Yoga.React.DOM.HTML (div)
-import Yoga.React.DOM.Internal (text)
 import YogaStories.Controls (enum)
 import YogaStories.Story (story) as S
 
@@ -30,14 +29,14 @@ mkChat :: { color :: BubbleColor } -> JSX
 mkChat = component "ChatStory" \props -> React.do
   pure $ div { className: "flex flex-col gap-4" }
     [ Chat.chatStart
-        [ Chat.chatHeader (text "Alice")
-        , Chat.chatBubble (colorClass props.color) (text "Hey, what's up?")
-        , Chat.chatFooter (text "Seen at 12:46")
+        [ Chat.chatHeader "Alice"
+        , Chat.chatBubble (colorClass props.color) "Hey, what's up?"
+        , Chat.chatFooter "Seen at 12:46"
         ]
     , Chat.chatEnd
-        [ Chat.chatHeader (text "Bob")
-        , Chat.chatBubble (colorClass props.color) (text "Not much, you?")
-        , Chat.chatFooter (text "Delivered")
+        [ Chat.chatHeader "Bob"
+        , Chat.chatBubble (colorClass props.color) "Not much, you?"
+        , Chat.chatFooter "Delivered"
         ]
     ]
 
