@@ -14,6 +14,11 @@ package:
     - web-html: ">=4.1.0 <5.0.0"
     - yoga-react: ">=1.0.1 <2.0.0"
     - yoga-react-dom: ">=1.0.3 <2.0.0"
+  test:
+    main: Test.Main
+    dependencies:
+      - yoga-stories
+      - console
   publish:
     version: 1.0.0
     license: WTFPL
@@ -26,3 +31,14 @@ workspace:
   extraPackages:
     yoga-react: "1.0.1"
     yoga-react-dom: "1.0.3"
+    yoga-stories:
+      path: /Users/mark/Developer/purescript-yoga-stories
+    yoga-fastify:
+      path: /Users/mark/Developer/purescript-yoga-fastify
+    yoga-http-api:
+      path: /Users/mark/Developer/purescript-yoga-http-api
+    yoga-options: "0.1.0"
+    yoga-om:
+      path: /Users/mark/Developer/purescript-yoga-om
+    yoga-om-layer: "1.0.6"
+    yoga-json: "5.2.0"

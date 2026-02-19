@@ -1,0 +1,5 @@
+{
+  "outputDir": "./output",
+  "include": ["DaisyUI.**.Stories"],
+  "exclude": []
+}
