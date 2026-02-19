@@ -12,10 +12,10 @@ mkSteps :: {} -> JSX
 mkSteps = component "StepsStory" \_ -> React.do
   pure $ div { className: "flex flex-col gap-8" }
     [ Steps.steps ""
-        [ Steps.step Steps.primary "Register"
-        , Steps.step Steps.primary "Choose plan"
-        , Steps.step "" "Purchase"
-        , Steps.step "" "Receive product"
+        [ li { className: "step step-primary", "data-content": "1" } "Register"
+        , li { className: "step step-primary", "data-content": "2" } "Choose plan"
+        , li { className: "step", "data-content": "3" } "Purchase"
+        , li { className: "step", "data-content": "4" } "Receive product"
         ]
     , Steps.steps ""
         [ li { className: "step step-info", "data-content": "✓" } "Register"
@@ -24,10 +24,10 @@ mkSteps = component "StepsStory" \_ -> React.do
         , li { className: "step", "data-content": "?" } "Receive product"
         ]
     , Steps.steps Steps.vertical
-        [ Steps.step Steps.primary "Register"
-        , Steps.step Steps.primary "Choose plan"
-        , Steps.step "" "Purchase"
-        , Steps.step "" "Receive product"
+        [ li { className: "step step-primary", "data-content": "1" } "Register"
+        , li { className: "step step-primary", "data-content": "2" } "Choose plan"
+        , li { className: "step", "data-content": "3" } "Purchase"
+        , li { className: "step", "data-content": "4" } "Receive product"
         ]
     ]
 
