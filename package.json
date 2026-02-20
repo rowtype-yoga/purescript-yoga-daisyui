@@ -2,7 +2,8 @@
   "name": "purescript-yoga-daisyui",
   "type": "module",
   "dependencies": {
-    "daisyui": "^5.0.0"
+    "daisyui": "^5.0.0",
+    "yoga-stories": "^0.1.7"
   },
   "peerDependencies": {
     "react": ">=18",
