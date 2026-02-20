@@ -648,22 +648,16 @@
       }
     },
     "extra_packages": {
-      "yoga-fastify": {
-        "path": "/Users/mark/Developer/purescript-yoga-fastify"
-      },
-      "yoga-http-api": {
-        "path": "/Users/mark/Developer/purescript-yoga-http-api"
-      },
+      "yoga-fastify": "0.3.0",
+      "yoga-http-api": "0.1.6",
       "yoga-json": "5.2.0",
-      "yoga-om": {
-        "path": "/Users/mark/Developer/purescript-yoga-om"
-      },
       "yoga-om-layer": "1.0.6",
       "yoga-options": "0.1.0",
       "yoga-react": "1.0.1",
       "yoga-react-dom": "1.0.3",
       "yoga-stories": {
-        "path": "/Users/mark/Developer/purescript-yoga-stories"
+        "git": "https://github.com/rowtype-yoga/purescript-yoga-stories.git",
+        "ref": "main"
       }
     }
   },
@@ -1851,8 +1845,9 @@
       ]
     },
     "yoga-fastify": {
-      "type": "local",
-      "path": "/Users/mark/Developer/purescript-yoga-fastify",
+      "type": "registry",
+      "version": "0.3.0",
+      "integrity": "sha256-nQZq9ZSVFPSXFzLtC32iz4RRT0JgigFLKlAe1PGB+Lo=",
       "dependencies": [
         "aff",
         "arrays",
@@ -1877,8 +1872,9 @@
       ]
     },
     "yoga-http-api": {
-      "type": "local",
-      "path": "/Users/mark/Developer/purescript-yoga-http-api",
+      "type": "registry",
+      "version": "0.1.6",
+      "integrity": "sha256-wI2aiM7S99gq7pPCBI8ijemMNV5vqjToLHVLr9nCtog=",
       "dependencies": [
         "aff",
         "arrays",
@@ -1986,8 +1982,9 @@
       ]
     },
     "yoga-stories": {
-      "type": "local",
-      "path": "/Users/mark/Developer/purescript-yoga-stories",
+      "type": "git",
+      "url": "https://github.com/rowtype-yoga/purescript-yoga-stories.git",
+      "rev": "6e583b74d1ffac5e9727c5440a315672d2b80fb6",
       "dependencies": [
         "aff",
         "arrays",

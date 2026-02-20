@@ -34,13 +34,10 @@ workspace:
     yoga-react: "1.0.1"
     yoga-react-dom: "1.0.3"
     yoga-stories:
-      path: /Users/mark/Developer/purescript-yoga-stories
-    yoga-fastify:
-      path: /Users/mark/Developer/purescript-yoga-fastify
-    yoga-http-api:
-      path: /Users/mark/Developer/purescript-yoga-http-api
+      git: https://github.com/rowtype-yoga/purescript-yoga-stories.git
+      ref: main
+    yoga-fastify: "0.3.0"
+    yoga-http-api: "0.1.6"
     yoga-options: "0.1.0"
-    yoga-om:
-      path: /Users/mark/Developer/purescript-yoga-om
     yoga-om-layer: "1.0.6"
     yoga-json: "5.2.0"
