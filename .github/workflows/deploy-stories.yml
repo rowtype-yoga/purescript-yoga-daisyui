@@ -1,0 +1,9 @@
+name: Deploy Stories to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    uses: rowtype-yoga/purescript-yoga-stories/.github/workflows/deploy-stories.yml@main
