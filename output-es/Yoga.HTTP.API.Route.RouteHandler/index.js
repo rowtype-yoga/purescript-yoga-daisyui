@@ -1,0 +1,10 @@
+import * as Unsafe$dCoerce from "../Unsafe.Coerce/index.js";
+const routeHandlerRouteRequestR = () => () => () => () => () => () => ({});
+const routeHandlerRouteRecord = () => () => () => () => () => () => ({});
+const apiRecordRecord = {};
+const aPIHandlersNilRow = {};
+const aPIHandlersConsRoute = () => () => () => ({});
+const runHandler = () => Unsafe$dCoerce.unsafeCoerce;
+const mkHandler = () => Unsafe$dCoerce.unsafeCoerce;
+const apiHandlers = () => () => () => handlers => handlers;
+export {aPIHandlersConsRoute, aPIHandlersNilRow, apiHandlers, apiRecordRecord, mkHandler, routeHandlerRouteRecord, routeHandlerRouteRequestR, runHandler};

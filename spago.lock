@@ -657,7 +657,7 @@
       "yoga-react-dom": "1.0.3",
       "yoga-stories": {
         "git": "https://github.com/rowtype-yoga/purescript-yoga-stories.git",
-        "ref": "main"
+        "ref": "3ca9623a44be"
       }
     }
   },
@@ -1984,7 +1984,7 @@
     "yoga-stories": {
       "type": "git",
       "url": "https://github.com/rowtype-yoga/purescript-yoga-stories.git",
-      "rev": "6e583b74d1ffac5e9727c5440a315672d2b80fb6",
+      "rev": "3ca9623a44be8425d3722447705588cb50f9a8b1",
       "dependencies": [
         "aff",
         "arrays",

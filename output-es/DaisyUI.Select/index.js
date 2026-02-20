@@ -1,0 +1,15 @@
+const xs = "select-xs";
+const warning = "select-warning";
+const success = "select-success";
+const sm = "select-sm";
+const selectCls = color => size => "select " + color + " " + size;
+const secondary = "select-secondary";
+const primary = "select-primary";
+const md = "select-md";
+const lg = "select-lg";
+const info = "select-info";
+const ghost = "select-ghost";
+const error = "select-error";
+const bordered = "select-bordered";
+const accent = "select-accent";
+export {accent, bordered, error, ghost, info, lg, md, primary, secondary, selectCls, sm, success, warning, xs};

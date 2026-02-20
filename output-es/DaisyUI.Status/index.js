@@ -1,0 +1,16 @@
+import * as Yoga$dReact$dDOM$dInternal from "../Yoga.React.DOM.Internal/index.js";
+const xs = "status-xs";
+const xl = "status-xl";
+const warning = "status-warning";
+const success = "status-success";
+const status = color => size => Yoga$dReact$dDOM$dInternal.createElementImpl("span", {className: "status " + color + " " + size}, []);
+const sm = "status-sm";
+const secondary = "status-secondary";
+const primary = "status-primary";
+const neutral = "status-neutral";
+const md = "status-md";
+const lg = "status-lg";
+const info = "status-info";
+const error = "status-error";
+const accent = "status-accent";
+export {accent, error, info, lg, md, neutral, primary, secondary, sm, status, success, warning, xl, xs};

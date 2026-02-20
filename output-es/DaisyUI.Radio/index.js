@@ -1,0 +1,13 @@
+const xs = "radio-xs";
+const warning = "radio-warning";
+const success = "radio-success";
+const sm = "radio-sm";
+const secondary = "radio-secondary";
+const radioCls = color => size => "radio " + color + " " + size;
+const primary = "radio-primary";
+const md = "radio-md";
+const lg = "radio-lg";
+const info = "radio-info";
+const error = "radio-error";
+const accent = "radio-accent";
+export {accent, error, info, lg, md, primary, radioCls, secondary, sm, success, warning, xs};

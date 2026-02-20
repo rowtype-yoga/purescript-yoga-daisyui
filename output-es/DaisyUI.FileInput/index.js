@@ -1,0 +1,15 @@
+const xs = "file-input-xs";
+const warning = "file-input-warning";
+const success = "file-input-success";
+const sm = "file-input-sm";
+const secondary = "file-input-secondary";
+const primary = "file-input-primary";
+const md = "file-input-md";
+const lg = "file-input-lg";
+const info = "file-input-info";
+const ghost = "file-input-ghost";
+const fileInputCls = color => size => "file-input " + color + " " + size;
+const error = "file-input-error";
+const bordered = "file-input-bordered";
+const accent = "file-input-accent";
+export {accent, bordered, error, fileInputCls, ghost, info, lg, md, primary, secondary, sm, success, warning, xs};

@@ -1,0 +1,15 @@
+import * as Yoga$dReact$dDOM$dHTML$dDiv from "../Yoga.React.DOM.HTML.Div/index.js";
+const warning = "chat-bubble-warning";
+const success = "chat-bubble-success";
+const secondary = "chat-bubble-secondary";
+const primary = "chat-bubble-primary";
+const info = "chat-bubble-info";
+const error = "chat-bubble-error";
+const chatStart = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "chat chat-start"});
+const chatImage = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "chat-image avatar"});
+const chatHeader = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "chat-header"});
+const chatFooter = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "chat-footer opacity-50"});
+const chatEnd = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "chat chat-end"});
+const chatBubble = color => () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "chat-bubble " + color});
+const accent = "chat-bubble-accent";
+export {accent, chatBubble, chatEnd, chatFooter, chatHeader, chatImage, chatStart, error, info, primary, secondary, success, warning};

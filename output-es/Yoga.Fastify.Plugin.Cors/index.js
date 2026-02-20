@@ -1,0 +1,12 @@
+import * as Yoga$dFastify$dPlugin from "../Yoga.Fastify.Plugin/index.js";
+import {corsPlugin} from "./foreign.js";
+const newtypeOrigin_ = {Coercible0: () => {}};
+const credentialsSafeSpecific = {};
+const credentialsSafeAllowAll = undefined;
+const originList = x => x;
+const originAll = "*";
+const origin = x => x;
+const corsCredentialed = () => () => opts => app => Yoga$dFastify$dPlugin.register(corsPlugin)(opts)(app);
+const cors = () => opts => app => Yoga$dFastify$dPlugin.register(corsPlugin)(opts)(app);
+export {cors, corsCredentialed, credentialsSafeAllowAll, credentialsSafeSpecific, newtypeOrigin_, origin, originAll, originList};
+export * from "./foreign.js";

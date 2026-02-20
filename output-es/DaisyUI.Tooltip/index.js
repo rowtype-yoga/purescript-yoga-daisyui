@@ -1,0 +1,14 @@
+import * as Yoga$dReact$dDOM$dHTML$dDiv from "../Yoga.React.DOM.HTML.Div/index.js";
+const warning = "tooltip-warning";
+const top = "tooltip-top";
+const tooltip = tip => position => () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "tooltip " + position, "data-tip": tip});
+const success = "tooltip-success";
+const secondary = "tooltip-secondary";
+const right = "tooltip-right";
+const primary = "tooltip-primary";
+const left = "tooltip-left";
+const info = "tooltip-info";
+const error = "tooltip-error";
+const bottom = "tooltip-bottom";
+const accent = "tooltip-accent";
+export {accent, bottom, error, info, left, primary, right, secondary, success, tooltip, top, warning};

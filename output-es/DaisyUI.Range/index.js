@@ -1,0 +1,13 @@
+const xs = "range-xs";
+const warning = "range-warning";
+const success = "range-success";
+const sm = "range-sm";
+const secondary = "range-secondary";
+const rangeCls = color => size => "range " + color + " " + size;
+const primary = "range-primary";
+const md = "range-md";
+const lg = "range-lg";
+const info = "range-info";
+const error = "range-error";
+const accent = "range-accent";
+export {accent, error, info, lg, md, primary, rangeCls, secondary, sm, success, warning, xs};

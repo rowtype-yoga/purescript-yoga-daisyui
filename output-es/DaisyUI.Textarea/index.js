@@ -1,0 +1,15 @@
+const xs = "textarea-xs";
+const warning = "textarea-warning";
+const textareaCls = color => size => "textarea " + color + " " + size;
+const success = "textarea-success";
+const sm = "textarea-sm";
+const secondary = "textarea-secondary";
+const primary = "textarea-primary";
+const md = "textarea-md";
+const lg = "textarea-lg";
+const info = "textarea-info";
+const ghost = "textarea-ghost";
+const error = "textarea-error";
+const bordered = "textarea-bordered";
+const accent = "textarea-accent";
+export {accent, bordered, error, ghost, info, lg, md, primary, secondary, sm, success, textareaCls, warning, xs};

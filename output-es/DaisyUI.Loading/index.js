@@ -1,0 +1,13 @@
+import * as Yoga$dReact$dDOM$dInternal from "../Yoga.React.DOM.Internal/index.js";
+const xs = "loading-xs";
+const spinner = "loading-spinner";
+const sm = "loading-sm";
+const ring = "loading-ring";
+const md = "loading-md";
+const loading = variant => size => Yoga$dReact$dDOM$dInternal.createElementImpl("span", {className: "loading " + variant + " " + size}, []);
+const lg = "loading-lg";
+const infinity = "loading-infinity";
+const dots = "loading-dots";
+const bars = "loading-bars";
+const ball = "loading-ball";
+export {ball, bars, dots, infinity, lg, loading, md, ring, sm, spinner, xs};

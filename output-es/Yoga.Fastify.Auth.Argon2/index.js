@@ -1,0 +1,13 @@
+import * as Data$dEq from "../Data.Eq/index.js";
+import * as Data$dShow from "../Data.Show/index.js";
+import * as Effect$dAff from "../Effect.Aff/index.js";
+import * as Promise$dAff from "../Promise.Aff/index.js";
+import {hashDefaultImpl, hashImpl, verifyImpl} from "./foreign.js";
+const HashedPassword = x => x;
+const showHashedPassword = Data$dShow.showString;
+const newtypeHashedPassword_ = {Coercible0: () => {}};
+const eqHashedPassword = Data$dEq.eqString;
+const verifyPassword = v => password => Effect$dAff._bind(Effect$dAff._liftEffect(() => verifyImpl(v, password)))(Promise$dAff.toAff$p(Promise$dAff.coerce));
+const hashPassword = () => password => opts => Effect$dAff._map(HashedPassword)(Effect$dAff._bind(Effect$dAff._liftEffect(() => hashImpl(password, opts)))(Promise$dAff.toAff$p(Promise$dAff.coerce)));
+export {HashedPassword, eqHashedPassword, hashPassword, newtypeHashedPassword_, showHashedPassword, verifyPassword};
+export * from "./foreign.js";

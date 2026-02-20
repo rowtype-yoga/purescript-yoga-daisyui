@@ -1,0 +1,13 @@
+const xs = "toggle-xs";
+const warning = "toggle-warning";
+const toggleCls = color => size => "toggle " + color + " " + size;
+const success = "toggle-success";
+const sm = "toggle-sm";
+const secondary = "toggle-secondary";
+const primary = "toggle-primary";
+const md = "toggle-md";
+const lg = "toggle-lg";
+const info = "toggle-info";
+const error = "toggle-error";
+const accent = "toggle-accent";
+export {accent, error, info, lg, md, primary, secondary, sm, success, toggleCls, warning, xs};

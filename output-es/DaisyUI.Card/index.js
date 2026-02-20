@@ -1,0 +1,11 @@
+import * as Yoga$dReact$dDOM$dHTML$dDiv from "../Yoga.React.DOM.HTML.Div/index.js";
+import * as Yoga$dReact$dDOM$dHTML$dH from "../Yoga.React.DOM.HTML.H/index.js";
+const cardTitle = () => Yoga$dReact$dDOM$dHTML$dH.h2()()({className: "card-title"});
+const cardSide = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "card card-side bg-base-100 shadow-sm"});
+const cardDash = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "card card-dash bg-base-100 shadow-sm"});
+const cardCompact = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "card card-compact bg-base-100 shadow-sm"});
+const cardBordered = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "card card-border bg-base-100 shadow-sm"});
+const cardBody = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "card-body"});
+const cardActions = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "card-actions justify-end"});
+const card = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "card bg-base-100 shadow-sm"});
+export {card, cardActions, cardBody, cardBordered, cardCompact, cardDash, cardSide, cardTitle};

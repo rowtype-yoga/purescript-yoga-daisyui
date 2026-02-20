@@ -1,0 +1,13 @@
+import * as Yoga$dReact$dDOM$dHTML$dButton from "../Yoga.React.DOM.HTML.Button/index.js";
+import * as Yoga$dReact$dDOM$dHTML$dDiv from "../Yoga.React.DOM.HTML.Div/index.js";
+import * as Yoga$dReact$dDOM$dHTML$dSpan from "../Yoga.React.DOM.HTML.Span/index.js";
+const xs = "dock-xs";
+const xl = "dock-xl";
+const sm = "dock-sm";
+const md = "dock-md";
+const lg = "dock-lg";
+const dockLabel = () => Yoga$dReact$dDOM$dHTML$dSpan.span()()({className: "dock-label"});
+const dockItemActive = () => Yoga$dReact$dDOM$dHTML$dButton.button()()({className: "dock-active"});
+const dockItem = () => Yoga$dReact$dDOM$dHTML$dButton.button()()({});
+const dock = size => () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "dock " + size});
+export {dock, dockItem, dockItemActive, dockLabel, lg, md, sm, xl, xs};

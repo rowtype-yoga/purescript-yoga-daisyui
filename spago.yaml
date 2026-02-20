@@ -35,7 +35,7 @@ workspace:
     yoga-react-dom: "1.0.3"
     yoga-stories:
       git: https://github.com/rowtype-yoga/purescript-yoga-stories.git
-      ref: main
+      ref: 3ca9623a44be
     yoga-fastify: "0.3.0"
     yoga-http-api: "0.1.6"
     yoga-options: "0.1.0"

@@ -1,0 +1,10 @@
+import * as Yoga$dReact$dDOM$dHTML$dDiv from "../Yoga.React.DOM.HTML.Div/index.js";
+import * as Yoga$dReact$dDOM$dHTML$dSpan from "../Yoga.React.DOM.HTML.Span/index.js";
+const indicatorTop = "indicator-top";
+const indicatorStart = "indicator-start";
+const indicatorItem = position => () => Yoga$dReact$dDOM$dHTML$dSpan.span()()({className: "indicator-item " + position});
+const indicatorEnd = "indicator-end";
+const indicatorCenter = "indicator-center";
+const indicatorBottom = "indicator-bottom";
+const indicator = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "indicator"});
+export {indicator, indicatorBottom, indicatorCenter, indicatorEnd, indicatorItem, indicatorStart, indicatorTop};

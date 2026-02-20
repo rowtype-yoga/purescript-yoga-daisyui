@@ -1,0 +1,11 @@
+const warning = "link-warning";
+const success = "link-success";
+const secondary = "link-secondary";
+const primary = "link-primary";
+const neutral = "link-neutral";
+const linkCls = color => "link " + color;
+const info = "link-info";
+const hover = "link-hover";
+const error = "link-error";
+const accent = "link-accent";
+export {accent, error, hover, info, linkCls, neutral, primary, secondary, success, warning};

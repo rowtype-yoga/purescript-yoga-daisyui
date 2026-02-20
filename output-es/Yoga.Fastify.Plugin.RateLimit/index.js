@@ -1,0 +1,11 @@
+import * as Unsafe$dCoerce from "../Unsafe.Coerce/index.js";
+import * as Yoga$dFastify$dPlugin from "../Yoga.Fastify.Plugin/index.js";
+import {rateLimitPlugin} from "./foreign.js";
+const RouteRateLimit = x => x;
+const newtypeRouteRateLimit_ = {Coercible0: () => {}};
+const timeWindowStr = Unsafe$dCoerce.unsafeCoerce;
+const timeWindowMs = Unsafe$dCoerce.unsafeCoerce;
+const routeRateLimit = () => opts => opts;
+const rateLimit = () => opts => app => Yoga$dFastify$dPlugin.register(rateLimitPlugin)(opts)(app);
+export {RouteRateLimit, newtypeRouteRateLimit_, rateLimit, routeRateLimit, timeWindowMs, timeWindowStr};
+export * from "./foreign.js";

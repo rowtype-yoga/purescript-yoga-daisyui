@@ -1,0 +1,13 @@
+const xs = "checkbox-xs";
+const warning = "checkbox-warning";
+const success = "checkbox-success";
+const sm = "checkbox-sm";
+const secondary = "checkbox-secondary";
+const primary = "checkbox-primary";
+const md = "checkbox-md";
+const lg = "checkbox-lg";
+const info = "checkbox-info";
+const error = "checkbox-error";
+const checkboxCls = color => size => "checkbox " + color + " " + size;
+const accent = "checkbox-accent";
+export {accent, checkboxCls, error, info, lg, md, primary, secondary, sm, success, warning, xs};

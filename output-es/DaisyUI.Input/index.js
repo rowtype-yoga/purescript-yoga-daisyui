@@ -1,0 +1,15 @@
+const xs = "input-xs";
+const warning = "input-warning";
+const success = "input-success";
+const sm = "input-sm";
+const secondary = "input-secondary";
+const primary = "input-primary";
+const md = "input-md";
+const lg = "input-lg";
+const inputCls = color => size => "input " + color + " " + size;
+const info = "input-info";
+const ghost = "input-ghost";
+const error = "input-error";
+const bordered = "input-bordered";
+const accent = "input-accent";
+export {accent, bordered, error, ghost, info, inputCls, lg, md, primary, secondary, sm, success, warning, xs};

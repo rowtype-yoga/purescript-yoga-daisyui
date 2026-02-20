@@ -1,0 +1,10 @@
+import * as Yoga$dReact$dDOM$dHTML$dDiv from "../Yoga.React.DOM.HTML.Div/index.js";
+const statsVertical = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "stats stats-vertical shadow-sm"});
+const stats = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "stats shadow-sm"});
+const statValue = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "stat-value"});
+const statTitle = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "stat-title"});
+const statFigure = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "stat-figure text-primary"});
+const statDesc = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "stat-desc"});
+const statActions = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "stat-actions"});
+const stat = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "stat"});
+export {stat, statActions, statDesc, statFigure, statTitle, statValue, stats, statsVertical};

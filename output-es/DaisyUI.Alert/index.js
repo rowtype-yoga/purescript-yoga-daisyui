@@ -1,0 +1,11 @@
+import * as Yoga$dReact$dDOM$dHTML$dDiv from "../Yoga.React.DOM.HTML.Div/index.js";
+const warning = "alert-warning";
+const vertical = "alert-vertical";
+const success = "alert-success";
+const soft = "alert-soft";
+const outline = "alert-outline";
+const info = "alert-info";
+const error = "alert-error";
+const dash = "alert-dash";
+const alert = color => () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "alert " + color, role: "alert"});
+export {alert, dash, error, info, outline, soft, success, vertical, warning};

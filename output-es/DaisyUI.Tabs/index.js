@@ -1,0 +1,13 @@
+import * as Yoga$dReact$dDOM$dHTML$dDiv from "../Yoga.React.DOM.HTML.Div/index.js";
+const xs = "tabs-xs";
+const tabs = variant => () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "tabs " + variant, role: "tablist"});
+const tabContent = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "tab-content p-4", role: "tabpanel"});
+const tabActive = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "tab tab-active", role: "tab"});
+const tab = () => Yoga$dReact$dDOM$dHTML$dDiv.div()()({className: "tab", role: "tab"});
+const sm = "tabs-sm";
+const md = "tabs-md";
+const lifted = "tabs-lift";
+const lg = "tabs-lg";
+const boxed = "tabs-box";
+const bordered = "tabs-border";
+export {bordered, boxed, lg, lifted, md, sm, tab, tabActive, tabContent, tabs, xs};
